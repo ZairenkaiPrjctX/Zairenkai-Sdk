@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "plan_id": "p-0002",
+  "language": "id",
+  "goal": "hemat baterai tanpa membuat game patah-patah",
+  "confidence": 0.41,
+  "clarifications": [
+    "Game mana yang paling sering dimainkan?"
+  ],
+  "invocations": [
+    {
+      "invocation_id": "i-1",
+      "tool_id": "core.health",
+      "arguments": {}
+    }
+  ]
+}

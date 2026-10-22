@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zairenkaiprjctx.github.io/schemas/sdk/zart/dexopt-status.schema.json",
+  "title": "zart dexopt-status",
+  "description": "`zart dexopt-status <package>`: one observation whose value names the package and its primary and secondary dex states.",
+  "allOf": [
+    {
+      "$ref": "observation.schema.json"
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "value"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "value": {
+            "type": "object",
+            "required": [
+              "package",
+              "primary",
+              "secondary"
+            ],
+            "properties": {
+              "package": {
+                "type": "string"
+              },
+              "primary": {
+                "type": "array"
+              },
+              "secondary": {
+                "type": "array"
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

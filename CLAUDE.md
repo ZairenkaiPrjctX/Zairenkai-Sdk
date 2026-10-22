@@ -8,21 +8,28 @@ put detail in `AGENT/`.
 
 ## Current state (read first)
 
-As of 2026-10-18 this repository contained **no source code** (GitHub API 2026-10-18: repository size 0, no branches, no commits; ls-remote returned no refs.).
-Until that changes:
+This repository holds the **cross-repository contracts** as JSON Schemas (draft 2020-12), the
+fixtures they are checked against, and `tools/zsdk.py` (Python ≥ 3.11, `jsonschema` from
+`requirements.lock`). Decision: `docs/adr/0001-canonical-contracts.md`. Overview: `README.md`.
 
-- Do not describe an architecture, language, or toolchain as fact. Record discoveries in
-  `AGENT/PROJECT_CONTEXT.md` with evidence (file paths, manifests, command output).
-- When the first real code lands, update this file's **Commands** table and
-  `AGENT/ARCHITECTURE.md` in the same pull request.
+Non-negotiables in this repo:
+- Producers stay canonical. `contracts/mirror/` is a byte copy at the commit in
+  `contracts/sources.json`; never edit it by hand (`zsdk.py mirror` rewrites it).
+- `fixtures/captured/` is real program output with its source commit and SHA-256
+  (`SOURCES.json`); never hand-write or edit it. Hand-written examples go in
+  `fixtures/synthetic/` and are marked `synthetic` in `contracts/index.json`.
+- Schemas for local-model output are closed (`additionalProperties: false`).
+- No ztune (GPL-3.0) code here: only schemas of its JSON output and its captured output as data.
 
 ## Commands
 
 | Purpose | Command | Status |
 |---|---|---|
-| Build | — | Not Configured |
-| Test | — | Not Configured |
-| Lint / format | — | Not Configured |
+| Set up | `python3 -m venv .venv && .venv/bin/pip install --require-hashes -r requirements.lock` | Verified. Evidence: fresh venv, Python 3.13, 2026-10-22 |
+| Test | `.venv/bin/python -m unittest discover -s tests -v` | Verified. Evidence: 25 passed, 2026-10-22 |
+| Validate fixtures | `.venv/bin/python tools/zsdk.py validate` | Verified. Evidence: 33/33 fixtures valid, 2026-10-22 |
+| Mirrors | `.venv/bin/python tools/zsdk.py check-mirrors thermaltools=<dir> afid=<dir>` | Verified. Evidence: all mirrors ok against fresh fetches of the pinned commits, 2026-10-22 |
+| Workflow lint | `actionlint .github/workflows/ci.yml` | Verified. Evidence: clean, 2026-10-22 |
 | Validate agent foundation | `python3 <path-to-.github>/agent-foundation/scripts/validate_agent_setup.py .` | Configured |
 
 Only list commands that exist in this repository. Never invent one.

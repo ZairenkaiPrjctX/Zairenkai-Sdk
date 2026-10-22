@@ -1,0 +1,95 @@
+{
+  "schema": 1,
+  "note": "Schemas owned by their producers and mirrored here byte for byte at the pinned commit (docs/adr/0001-canonical-contracts.md). tools/zsdk.py check-mirrors compares them with the producer; never edit a mirror by hand.",
+  "producers": {
+    "thermaltools": {
+      "repository": "ZairenkaiPrjctX/Zairenkai-ThermalTools",
+      "commit": "3bc71fea9d2317db10ee551aede857de1448f90f",
+      "license": "Apache-2.0",
+      "mirrors": [
+        {
+          "source": "schemas/capability.schema.json",
+          "mirror": "mirror/thermaltools/capability.schema.json",
+          "sha256": "e5a67e92c701ae8a8c408e44b233e218e44bee612872cfe3beff3320708042ab"
+        },
+        {
+          "source": "schemas/inspection.schema.json",
+          "mirror": "mirror/thermaltools/inspection.schema.json",
+          "sha256": "ad16b91a63ad958c46a5a97c6f31fd13d884b2d3bbc18274dd16459d1da1194f"
+        },
+        {
+          "source": "schemas/profile.schema.json",
+          "mirror": "mirror/thermaltools/profile.schema.json",
+          "sha256": "89f3b0785addd4ece4d5d92d9b3296c5b48207e5fe3bbe15eb9f2cb728aaef3d"
+        },
+        {
+          "source": "schemas/snapshot.schema.json",
+          "mirror": "mirror/thermaltools/snapshot.schema.json",
+          "sha256": "5d343ba0607fb59022464599d4fab1d56b6d105f7706f9e6abe0f0ac393ce295"
+        }
+      ]
+    },
+    "afid": {
+      "repository": "ZairenkaiPrjctX/Zairenkai-Database-Source",
+      "commit": "d9c4290ae0c4503b30449edf636b865c51a96f15",
+      "license": "Apache-2.0",
+      "mirrors": [
+        {
+          "source": "schemas/candidate.schema.json",
+          "mirror": "mirror/afid/candidate.schema.json",
+          "sha256": "ab05776f64cb465365d6eb9ba0a3229dde6242d207be36408678c01c1eeb11cf"
+        },
+        {
+          "source": "schemas/component.schema.json",
+          "mirror": "mirror/afid/component.schema.json",
+          "sha256": "81abc9e22afe2ef3a77b4f35b5503be8bb0e62878b9cdaf59ad014b5a6d036a5"
+        },
+        {
+          "source": "schemas/dependency.schema.json",
+          "mirror": "mirror/afid/dependency.schema.json",
+          "sha256": "eb1acc69f162f96780138491cbf6a40b12e6456af5c31f217550e5d91e3e16c3"
+        },
+        {
+          "source": "schemas/device.schema.json",
+          "mirror": "mirror/afid/device.schema.json",
+          "sha256": "7ee9d99a275da96504d868a5e23a84752edcc342ff044488873d2470fe599d89"
+        },
+        {
+          "source": "schemas/firmware-record.schema.json",
+          "mirror": "mirror/afid/firmware-record.schema.json",
+          "sha256": "2dade2b5726b28d766ec541bc42be45ea72bf047224759dca968071517549a07"
+        },
+        {
+          "source": "schemas/firmware.schema.json",
+          "mirror": "mirror/afid/firmware.schema.json",
+          "sha256": "bde7c110d8203628d92685575c8045abb7fa001a15e8d473c00ab0cff712d533"
+        },
+        {
+          "source": "schemas/report.schema.json",
+          "mirror": "mirror/afid/report.schema.json",
+          "sha256": "16cc130b01c0e7253ae897e30c0c3ce06394d9744d9344ab9ec6b09dc87946d2"
+        },
+        {
+          "source": "schemas/run-manifest.schema.json",
+          "mirror": "mirror/afid/run-manifest.schema.json",
+          "sha256": "803b4f6920883a8e46acc8477679e1283468bd94505e08816cefa1984f752482"
+        },
+        {
+          "source": "schemas/source-registry.schema.json",
+          "mirror": "mirror/afid/source-registry.schema.json",
+          "sha256": "66b3c7d0014a40ff5f6b615a6424f2081c958846b7a9aa02422ef5a4da54ed3e"
+        },
+        {
+          "source": "schemas/source.schema.json",
+          "mirror": "mirror/afid/source.schema.json",
+          "sha256": "37403763130cd033be5149d400837d1ffb39a9697257534fa5cf5795c7aef783"
+        },
+        {
+          "source": "schemas/state.schema.json",
+          "mirror": "mirror/afid/state.schema.json",
+          "sha256": "1bde3a7c7318b1dda7b8920b09957203e85af0b846d33bcc09f1cecba64cd05f"
+        }
+      ]
+    }
+  }
+}

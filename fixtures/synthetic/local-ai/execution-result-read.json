@@ -1,0 +1,8 @@
+{
+  "invocation_id": "i-1",
+  "tool_id": "core.health",
+  "status": "completed",
+  "output": {
+    "state": "degraded"
+  }
+}

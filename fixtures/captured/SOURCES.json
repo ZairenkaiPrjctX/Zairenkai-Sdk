@@ -1,0 +1,178 @@
+{
+  "schema": 1,
+  "note": "Outputs of the real binaries, copied byte for byte from the repositories that captured them. Producer revisions: see 'producers'. Snapshots named synthetic-* are zthermal runs over ThermalTools' own synthetic device trees, and capabilities-synthetic-profile/apply-gpu-governor are ztune runs with a test-only synthetic profile over a fixture root: real program output, synthetic inputs. Re-copy with the commands in README.md; never edit by hand.",
+  "producers": {
+    "app_capture": {
+      "captured_by": "integration/scripts/capture-contracts.sh",
+      "host": "Linux container (no Android services: device inputs report unavailable)",
+      "zart": "0d8cd7248d7aff3504077b4f3e63af1bf6bf282c",
+      "zthermal": "3bc71fea9d2317db10ee551aede857de1448f90f",
+      "zcored": "8931cbb6aa3e70dc0197c2840b61842039b03626",
+      "zfasd": "99cfb18ba7f04753b3cda5534b8fa844d86db9d5"
+    },
+    "tuning_capture": "Captured from ZairenkaiPrjctX/Zairenkai-Tuning 0c226b27771c0e0274feb6435b36c8d90487a814 on its synthetic fixture tree\nby scripts/capture-tuning-contract.sh. Do not edit by hand.\n*-synthetic-profile.json and apply-gpu-governor.json use the SYNTHETIC test profile\n(crates/ztune/tests/fixtures/profiles); no device record authorizes them."
+  },
+  "files": [
+    {
+      "fixture": "captured/app/core/health.json",
+      "repository": "ZairenkaiPrjctX/Zairenkai-App",
+      "commit": "e1ca3873b0c32404997d4ba8e7218f583f7f86bb",
+      "path": "integration-core/src/test/resources/contracts/core/health.json",
+      "sha256": "080f9041963ad37b421a61117e778986ffa7d1467783a5eb9af63ed7f49e6431"
+    },
+    {
+      "fixture": "captured/app/core/capabilities.json",
+      "repository": "ZairenkaiPrjctX/Zairenkai-App",
+      "commit": "e1ca3873b0c32404997d4ba8e7218f583f7f86bb",
+      "path": "integration-core/src/test/resources/contracts/core/capabilities.json",
+      "sha256": "ead4a6c3c37749b0c0d729006175b31cbc11f12cf52936ff464da4a223639b6a"
+    },
+    {
+      "fixture": "captured/app/core/modules.json",
+      "repository": "ZairenkaiPrjctX/Zairenkai-App",
+      "commit": "e1ca3873b0c32404997d4ba8e7218f583f7f86bb",
+      "path": "integration-core/src/test/resources/contracts/core/modules.json",
+      "sha256": "38f1dca88b9f880f54089cd73729deacc92424fd850071372f9681fe39b10c89"
+    },
+    {
+      "fixture": "captured/app/core/modules-installed.json",
+      "repository": "ZairenkaiPrjctX/Zairenkai-App",
+      "commit": "e1ca3873b0c32404997d4ba8e7218f583f7f86bb",
+      "path": "integration-core/src/test/resources/contracts/core/modules-installed.json",
+      "sha256": "b3addc7661159f2dd22bd8f17bfc4ec4a3f73ee3f2fd8c7fce9e828e6f94e2fb"
+    },
+    {
+      "fixture": "captured/app/core/submit-dry-run.json",
+      "repository": "ZairenkaiPrjctX/Zairenkai-App",
+      "commit": "e1ca3873b0c32404997d4ba8e7218f583f7f86bb",
+      "path": "integration-core/src/test/resources/contracts/core/submit-dry-run.json",
+      "sha256": "d15e4df2c3694a52caf9556366cd609a1efcd163d2bdc93b2f64f4adccc7ae5f"
+    },
+    {
+      "fixture": "captured/app/fas/status.json",
+      "repository": "ZairenkaiPrjctX/Zairenkai-App",
+      "commit": "e1ca3873b0c32404997d4ba8e7218f583f7f86bb",
+      "path": "integration-core/src/test/resources/contracts/fas/status.json",
+      "sha256": "85442cccd9ce982b79b1ac07e17a3a00b611229d0703c0d10e5dc8580ae2caa7"
+    },
+    {
+      "fixture": "captured/app/fas/profile-ok.json",
+      "repository": "ZairenkaiPrjctX/Zairenkai-App",
+      "commit": "e1ca3873b0c32404997d4ba8e7218f583f7f86bb",
+      "path": "integration-core/src/test/resources/contracts/fas/profile-ok.json",
+      "sha256": "5abc38dd6784a7a7c99356d0cc4939015c4bbbe2b52ae5e04bbb082cb8a45a9d"
+    },
+    {
+      "fixture": "captured/app/zart/inspect-host.json",
+      "repository": "ZairenkaiPrjctX/Zairenkai-App",
+      "commit": "e1ca3873b0c32404997d4ba8e7218f583f7f86bb",
+      "path": "integration-core/src/test/resources/contracts/zart/inspect-host.json",
+      "sha256": "9714f987025ddebd1e8a3ed917be1f1bf46f32f7070b078ad3529d55c703decb"
+    },
+    {
+      "fixture": "captured/app/zart/inspect-fixture.json",
+      "repository": "ZairenkaiPrjctX/Zairenkai-App",
+      "commit": "e1ca3873b0c32404997d4ba8e7218f583f7f86bb",
+      "path": "integration-core/src/test/resources/contracts/zart/inspect-fixture.json",
+      "sha256": "bc5a6ed5d2435adec9282315ca3ac7dfc9de2aebf8338ac002076a6fde7b7fdb"
+    },
+    {
+      "fixture": "captured/app/zart/dexopt-status-fixture.json",
+      "repository": "ZairenkaiPrjctX/Zairenkai-App",
+      "commit": "e1ca3873b0c32404997d4ba8e7218f583f7f86bb",
+      "path": "integration-core/src/test/resources/contracts/zart/dexopt-status-fixture.json",
+      "sha256": "ea3c4fc9c93e02d24318faa15baa78a3eda684bc593cad9eac3f8ec885c71056"
+    },
+    {
+      "fixture": "captured/app/zart/dexopt-status-denied.json",
+      "repository": "ZairenkaiPrjctX/Zairenkai-App",
+      "commit": "e1ca3873b0c32404997d4ba8e7218f583f7f86bb",
+      "path": "integration-core/src/test/resources/contracts/zart/dexopt-status-denied.json",
+      "sha256": "50e2074855d503b65b4bec797d578de9c8c16a4b0ea59cc0337a9904bf9c0f37"
+    },
+    {
+      "fixture": "captured/app/zart/dexopt-status-host.json",
+      "repository": "ZairenkaiPrjctX/Zairenkai-App",
+      "commit": "e1ca3873b0c32404997d4ba8e7218f583f7f86bb",
+      "path": "integration-core/src/test/resources/contracts/zart/dexopt-status-host.json",
+      "sha256": "6204d4d1526b57bb194faa1eb7fad2e10f713190a839b9d75c72e577f2ac8116"
+    },
+    {
+      "fixture": "captured/app/zthermal/snapshot-host.json",
+      "repository": "ZairenkaiPrjctX/Zairenkai-App",
+      "commit": "e1ca3873b0c32404997d4ba8e7218f583f7f86bb",
+      "path": "integration-core/src/test/resources/contracts/zthermal/snapshot-host.json",
+      "sha256": "8eb34367568917b390b08d9dc460842c471874c0f0babe284a32246fa6971a39"
+    },
+    {
+      "fixture": "captured/app/zthermal/snapshot-empty-host.json",
+      "repository": "ZairenkaiPrjctX/Zairenkai-App",
+      "commit": "e1ca3873b0c32404997d4ba8e7218f583f7f86bb",
+      "path": "integration-core/src/test/resources/contracts/zthermal/snapshot-empty-host.json",
+      "sha256": "f16932b3a892006ed3194b780b337e9a4fc72e06dbc14f3fc519758816b13361"
+    },
+    {
+      "fixture": "captured/app/zthermal/snapshot-synthetic-qcom.json",
+      "repository": "ZairenkaiPrjctX/Zairenkai-App",
+      "commit": "e1ca3873b0c32404997d4ba8e7218f583f7f86bb",
+      "path": "integration-core/src/test/resources/contracts/zthermal/snapshot-synthetic-qcom.json",
+      "sha256": "47f5a87b74a270b763d566ecd3e05cf90c54fff780b441d4118bc5711a6416e0"
+    },
+    {
+      "fixture": "captured/app/zthermal/snapshot-synthetic-pixel.json",
+      "repository": "ZairenkaiPrjctX/Zairenkai-App",
+      "commit": "e1ca3873b0c32404997d4ba8e7218f583f7f86bb",
+      "path": "integration-core/src/test/resources/contracts/zthermal/snapshot-synthetic-pixel.json",
+      "sha256": "f683e4660cd5a3dca24b7b519564a8faf84316484b52b022c6b0306c6628cadc"
+    },
+    {
+      "fixture": "captured/app/zthermal/snapshot-synthetic-mtk.json",
+      "repository": "ZairenkaiPrjctX/Zairenkai-App",
+      "commit": "e1ca3873b0c32404997d4ba8e7218f583f7f86bb",
+      "path": "integration-core/src/test/resources/contracts/zthermal/snapshot-synthetic-mtk.json",
+      "sha256": "7e3b2a760d4135932754dbea8111b9e3145bc9f4a75ce578719c1445ab3d1367"
+    },
+    {
+      "fixture": "captured/app/system-modules/catalog.json",
+      "repository": "ZairenkaiPrjctX/Zairenkai-App",
+      "commit": "e1ca3873b0c32404997d4ba8e7218f583f7f86bb",
+      "path": "integration-core/src/test/resources/contracts/system-modules/catalog.json",
+      "sha256": "668980ac92ab4464982fcda0d78794eae467f4223f79422837a3e817674245ad"
+    },
+    {
+      "fixture": "captured/tuning/capabilities.json",
+      "repository": "ZairenkaiPrjctX/Zairenkai-Core",
+      "commit": "dec9d7925cec892eef4c1bd1d800d9a233bf6aec",
+      "path": "crates/zcore-platform/tests/fixtures/tuning/capabilities.json",
+      "sha256": "79bb69071fa1ee14a271d2fc3a93f995c42231b3d32a67aa43c8b97d08ee9eb7"
+    },
+    {
+      "fixture": "captured/tuning/telemetry.json",
+      "repository": "ZairenkaiPrjctX/Zairenkai-Core",
+      "commit": "dec9d7925cec892eef4c1bd1d800d9a233bf6aec",
+      "path": "crates/zcore-platform/tests/fixtures/tuning/telemetry.json",
+      "sha256": "25f1008bd91218f340aa456a30d9ba751c22333e6d1e6a5fa2e9aca7d08b8142"
+    },
+    {
+      "fixture": "captured/tuning/apply-not-authorized.json",
+      "repository": "ZairenkaiPrjctX/Zairenkai-Core",
+      "commit": "dec9d7925cec892eef4c1bd1d800d9a233bf6aec",
+      "path": "crates/zcore-platform/tests/fixtures/tuning/apply-not-authorized.json",
+      "sha256": "e148f7c2bca8b2ad6e51f5e043e81595e0f077aded5b32426d71db85da8b0c70"
+    },
+    {
+      "fixture": "captured/tuning/capabilities-synthetic-profile.json",
+      "repository": "ZairenkaiPrjctX/Zairenkai-Core",
+      "commit": "dec9d7925cec892eef4c1bd1d800d9a233bf6aec",
+      "path": "crates/zcore-platform/tests/fixtures/tuning/capabilities-synthetic-profile.json",
+      "sha256": "ba6642160da0a7df3b7e2c8e2ba016b771ba5617dcfeea198f2de5b7657acc15"
+    },
+    {
+      "fixture": "captured/tuning/apply-gpu-governor.json",
+      "repository": "ZairenkaiPrjctX/Zairenkai-Core",
+      "commit": "dec9d7925cec892eef4c1bd1d800d9a233bf6aec",
+      "path": "crates/zcore-platform/tests/fixtures/tuning/apply-gpu-governor.json",
+      "sha256": "f2e367a832c8707f5dcdb5e2fa05d8ba4c0dda0e0484e884932c6c7d103c3262"
+    }
+  ]
+}

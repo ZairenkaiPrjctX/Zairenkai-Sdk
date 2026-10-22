@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zairenkaiprjctx.github.io/schemas/sdk/zart/observation.schema.json",
+  "title": "zart observation",
+  "description": "Every reported value says where it came from, or why it is missing (Zairenkai-ART crates/zart/src/obs.rs, Obs<T>, tagged by status).",
+  "oneOf": [
+    {
+      "type": "object",
+      "required": [
+        "status",
+        "value",
+        "source"
+      ],
+      "properties": {
+        "status": {
+          "const": "value"
+        },
+        "value": {},
+        "source": {
+          "type": "string"
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "status",
+        "source",
+        "detail"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "unavailable",
+            "permission_denied",
+            "unsupported"
+          ]
+        },
+        "source": {
+          "type": "string"
+        },
+        "detail": {
+          "type": "string"
+        }
+      },
+      "not": {
+        "required": [
+          "value"
+        ]
+      }
+    }
+  ]
+}

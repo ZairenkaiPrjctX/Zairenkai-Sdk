@@ -10,3 +10,9 @@
 *.p12
 *.jks
 *.keystore
+
+# Python
+__pycache__/
+.venv/
+# CI scratch: producer checkouts for check-mirrors
+producers/
