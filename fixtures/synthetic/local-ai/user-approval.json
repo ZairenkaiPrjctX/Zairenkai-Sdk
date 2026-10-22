@@ -1,0 +1,9 @@
+{
+  "plan_id": "p-0003",
+  "decision": "approved",
+  "invocation_ids": [
+    "i-1"
+  ],
+  "decided_at_ms": 2000,
+  "scope": "once"
+}

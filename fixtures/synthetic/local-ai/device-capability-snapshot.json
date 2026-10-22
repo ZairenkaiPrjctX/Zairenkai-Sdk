@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "captured_at_ms": 900,
+  "facts": [
+    {
+      "id": "android.api_level",
+      "status": "value",
+      "value": 35,
+      "source": "Build.VERSION.SDK_INT"
+    },
+    {
+      "id": "thermal.status",
+      "status": "unavailable",
+      "source": "PowerManager.getCurrentThermalStatus"
+    },
+    {
+      "id": "fas.profile",
+      "status": "stale",
+      "value": "performance",
+      "source": "zfasd ctl status via Core"
+    }
+  ],
+  "accelerators": [
+    {
+      "kind": "cpu",
+      "backend": "llama.cpp",
+      "self_test": "not_run"
+    }
+  ]
+}

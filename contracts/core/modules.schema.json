@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zairenkaiprjctx.github.io/schemas/sdk/core/modules.schema.json",
+  "title": "zcored modules result",
+  "description": "`modules` method (Core crates/zcore-domain/src/module.rs, ModuleHealth snake_case; version is Core's struct, never a string).",
+  "allOf": [
+    {
+      "$ref": "envelope.schema.json"
+    },
+    {
+      "properties": {
+        "ok": {
+          "const": true
+        },
+        "result": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "health",
+              "compatible",
+              "detail",
+              "owns",
+              "requested_permissions"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "health": {
+                "enum": [
+                  "healthy",
+                  "degraded",
+                  "unreachable",
+                  "disabled",
+                  "not_installed",
+                  "unknown"
+                ]
+              },
+              "compatible": {
+                "type": "boolean"
+              },
+              "detail": {
+                "type": "string"
+              },
+              "version": {
+                "oneOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "type": "object",
+                    "required": [
+                      "major",
+                      "minor",
+                      "patch"
+                    ],
+                    "properties": {
+                      "major": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "minor": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "patch": {
+                        "type": "integer",
+                        "minimum": 0
+                      }
+                    }
+                  }
+                ]
+              },
+              "owns": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "requested_permissions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

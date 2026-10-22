@@ -1,0 +1,171 @@
+{
+  "schema": 1,
+  "note": "Which schema each fixture must satisfy. origin=captured: real program output (fixtures/captured/SOURCES.json). origin=synthetic: written by hand to exercise a contract that has no producer yet; never evidence of device behaviour.",
+  "fixtures": [
+    {
+      "fixture": "fixtures/captured/app/core/health.json",
+      "schema": "core/health.schema.json",
+      "origin": "captured"
+    },
+    {
+      "fixture": "fixtures/captured/app/core/capabilities.json",
+      "schema": "core/capabilities.schema.json",
+      "origin": "captured"
+    },
+    {
+      "fixture": "fixtures/captured/app/core/modules.json",
+      "schema": "core/modules.schema.json",
+      "origin": "captured"
+    },
+    {
+      "fixture": "fixtures/captured/app/core/modules-installed.json",
+      "schema": "core/modules.schema.json",
+      "origin": "captured"
+    },
+    {
+      "fixture": "fixtures/captured/app/core/submit-dry-run.json",
+      "schema": "core/submit-result.schema.json",
+      "origin": "captured"
+    },
+    {
+      "fixture": "fixtures/captured/app/fas/status.json",
+      "schema": "fas/status.schema.json",
+      "origin": "captured"
+    },
+    {
+      "fixture": "fixtures/captured/app/fas/profile-ok.json",
+      "schema": "fas/ctl-reply.schema.json",
+      "origin": "captured"
+    },
+    {
+      "fixture": "fixtures/captured/app/zart/inspect-host.json",
+      "schema": "zart/inspect.schema.json",
+      "origin": "captured"
+    },
+    {
+      "fixture": "fixtures/captured/app/zart/inspect-fixture.json",
+      "schema": "zart/inspect.schema.json",
+      "origin": "captured"
+    },
+    {
+      "fixture": "fixtures/captured/app/zart/dexopt-status-fixture.json",
+      "schema": "zart/dexopt-status.schema.json",
+      "origin": "captured"
+    },
+    {
+      "fixture": "fixtures/captured/app/zart/dexopt-status-denied.json",
+      "schema": "zart/dexopt-status.schema.json",
+      "origin": "captured"
+    },
+    {
+      "fixture": "fixtures/captured/app/zart/dexopt-status-host.json",
+      "schema": "zart/dexopt-status.schema.json",
+      "origin": "captured"
+    },
+    {
+      "fixture": "fixtures/captured/app/zthermal/snapshot-host.json",
+      "schema": "mirror/thermaltools/snapshot.schema.json",
+      "origin": "captured"
+    },
+    {
+      "fixture": "fixtures/captured/app/zthermal/snapshot-empty-host.json",
+      "schema": "mirror/thermaltools/snapshot.schema.json",
+      "origin": "captured"
+    },
+    {
+      "fixture": "fixtures/captured/app/zthermal/snapshot-synthetic-qcom.json",
+      "schema": "mirror/thermaltools/snapshot.schema.json",
+      "origin": "captured"
+    },
+    {
+      "fixture": "fixtures/captured/app/zthermal/snapshot-synthetic-pixel.json",
+      "schema": "mirror/thermaltools/snapshot.schema.json",
+      "origin": "captured"
+    },
+    {
+      "fixture": "fixtures/captured/app/zthermal/snapshot-synthetic-mtk.json",
+      "schema": "mirror/thermaltools/snapshot.schema.json",
+      "origin": "captured"
+    },
+    {
+      "fixture": "fixtures/captured/app/system-modules/catalog.json",
+      "schema": "modules/catalog.schema.json",
+      "origin": "captured"
+    },
+    {
+      "fixture": "fixtures/captured/tuning/capabilities.json",
+      "schema": "tuning/document.schema.json",
+      "origin": "captured"
+    },
+    {
+      "fixture": "fixtures/captured/tuning/telemetry.json",
+      "schema": "tuning/document.schema.json",
+      "origin": "captured"
+    },
+    {
+      "fixture": "fixtures/captured/tuning/apply-not-authorized.json",
+      "schema": "tuning/document.schema.json",
+      "origin": "captured"
+    },
+    {
+      "fixture": "fixtures/captured/tuning/capabilities-synthetic-profile.json",
+      "schema": "tuning/document.schema.json",
+      "origin": "captured"
+    },
+    {
+      "fixture": "fixtures/captured/tuning/apply-gpu-governor.json",
+      "schema": "tuning/document.schema.json",
+      "origin": "captured"
+    },
+    {
+      "fixture": "fixtures/synthetic/local-ai/intent-plan.json",
+      "schema": "local-ai/intent-plan.schema.json",
+      "origin": "synthetic"
+    },
+    {
+      "fixture": "fixtures/synthetic/local-ai/intent-plan-clarify.json",
+      "schema": "local-ai/intent-plan.schema.json",
+      "origin": "synthetic"
+    },
+    {
+      "fixture": "fixtures/synthetic/local-ai/tool-registry.json",
+      "schema": "local-ai/tool-registry.schema.json",
+      "origin": "synthetic"
+    },
+    {
+      "fixture": "fixtures/synthetic/local-ai/action-preview.json",
+      "schema": "local-ai/action-preview.schema.json",
+      "origin": "synthetic"
+    },
+    {
+      "fixture": "fixtures/synthetic/local-ai/user-approval.json",
+      "schema": "local-ai/user-approval.schema.json",
+      "origin": "synthetic"
+    },
+    {
+      "fixture": "fixtures/synthetic/local-ai/execution-result-rejected.json",
+      "schema": "local-ai/execution-result.schema.json",
+      "origin": "synthetic"
+    },
+    {
+      "fixture": "fixtures/synthetic/local-ai/execution-result-read.json",
+      "schema": "local-ai/execution-result.schema.json",
+      "origin": "synthetic"
+    },
+    {
+      "fixture": "fixtures/synthetic/local-ai/agent-audit-event.json",
+      "schema": "local-ai/agent-audit-event.schema.json",
+      "origin": "synthetic"
+    },
+    {
+      "fixture": "fixtures/synthetic/local-ai/model-manifest.json",
+      "schema": "local-ai/model-manifest.schema.json",
+      "origin": "synthetic"
+    },
+    {
+      "fixture": "fixtures/synthetic/local-ai/device-capability-snapshot.json",
+      "schema": "local-ai/device-capability-snapshot.schema.json",
+      "origin": "synthetic"
+    }
+  ]
+}

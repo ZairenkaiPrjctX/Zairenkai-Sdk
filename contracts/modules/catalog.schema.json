@@ -1,0 +1,163 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zairenkaiprjctx.github.io/schemas/sdk/modules/catalog.schema.json",
+  "title": "Zairenkai module catalog",
+  "description": "assets/system-modules.json as Zairenkai-App's build-components.sh writes it from integration/system-modules.json and the real module zip (module_asset.py). Defined here: it has no single producer schema (contracts/README.md).",
+  "type": "object",
+  "required": [
+    "schema",
+    "modules"
+  ],
+  "properties": {
+    "schema": {
+      "const": 1
+    },
+    "modules": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "role",
+          "lock_component",
+          "name",
+          "features",
+          "requirements",
+          "reboot_required",
+          "data_dir",
+          "runtime_check",
+          "validated_on",
+          "risks",
+          "lifecycle",
+          "distribution",
+          "distribution_reason",
+          "file",
+          "version",
+          "version_code",
+          "size",
+          "sha256",
+          "source",
+          "entries",
+          "source_matched"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          },
+          "role": {
+            "type": "string"
+          },
+          "lock_component": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "features": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "requirements": {
+            "type": "object",
+            "required": [
+              "arch",
+              "abi",
+              "min_api",
+              "managers"
+            ]
+          },
+          "reboot_required": {
+            "type": "boolean"
+          },
+          "data_dir": {
+            "type": "string",
+            "pattern": "^/data/adb/"
+          },
+          "runtime_check": {
+            "type": "string"
+          },
+          "validated_on": {
+            "type": "array"
+          },
+          "risks": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "lifecycle": {
+            "type": "object"
+          },
+          "distribution": {
+            "enum": [
+              "distributable",
+              "internal"
+            ]
+          },
+          "distribution_reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "file": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "version_code": {
+            "type": [
+              "integer",
+              "string"
+            ]
+          },
+          "size": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "source": {
+            "type": "object",
+            "required": [
+              "repository",
+              "commit"
+            ],
+            "properties": {
+              "repository": {
+                "type": "string"
+              },
+              "commit": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{40}$"
+              }
+            }
+          },
+          "entries": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "propertyNames": {
+              "not": {
+                "pattern": "(^/|(^|/)\\.\\.(/|$))"
+              }
+            }
+          },
+          "source_matched": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

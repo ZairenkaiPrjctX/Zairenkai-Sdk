@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zairenkaiprjctx.github.io/schemas/sdk/fas/ctl-reply.schema.json",
+  "title": "zfasd ctl reply",
+  "description": "Reply of a zfasd ctl command such as profile or enable (Zairenkai-FAS docs/INTEGRATION.md).",
+  "type": "object",
+  "required": [
+    "ok",
+    "message"
+  ],
+  "properties": {
+    "ok": {
+      "type": "boolean"
+    },
+    "message": {
+      "type": "string"
+    }
+  }
+}

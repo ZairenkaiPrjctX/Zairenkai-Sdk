@@ -1,0 +1,10 @@
+{
+  "invocation_id": "i-1",
+  "tool_id": "fas.set_profile",
+  "status": "rejected",
+  "core_request_id": "r-77",
+  "error": {
+    "code": "policy_deny",
+    "message": "builtin.thermal: thermal status SEVERE"
+  }
+}

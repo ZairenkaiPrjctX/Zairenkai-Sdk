@@ -1,0 +1,70 @@
+{
+  "id": "cli-22313-3007755",
+  "ok": true,
+  "result": [
+    {
+      "compatible": false,
+      "detail": "Zairenkai-Modules: module zairenkai is not installed in /data/adb/modules",
+      "health": "not_installed",
+      "id": "zairenkai",
+      "owns": [],
+      "requested_permissions": [],
+      "version": null
+    },
+    {
+      "compatible": false,
+      "detail": "Zairenkai-ThermalTools: paths.thermaltools_binary is not configured",
+      "health": "not_installed",
+      "id": "zairenkai_thermaltools",
+      "owns": [],
+      "requested_permissions": [],
+      "version": null
+    },
+    {
+      "compatible": false,
+      "detail": "Zairenkai-SDK: no released component; Core has no adapter for it yet",
+      "health": "not_installed",
+      "id": "zairenkai_sdk",
+      "owns": [],
+      "requested_permissions": [],
+      "version": null
+    },
+    {
+      "compatible": false,
+      "detail": "Zairenkai-License-Server: no released component; Core has no adapter for it yet",
+      "health": "not_installed",
+      "id": "zairenkai_license_server",
+      "owns": [],
+      "requested_permissions": [],
+      "version": null
+    },
+    {
+      "compatible": false,
+      "detail": "Zairenkai-Intelligence-Engine: no released component; Core has no adapter for it yet",
+      "health": "not_installed",
+      "id": "zairenkai_intelligence",
+      "owns": [],
+      "requested_permissions": [],
+      "version": null
+    },
+    {
+      "compatible": false,
+      "detail": "Zairenkai-Graphics-Platform: no released component; Core has no adapter for it yet",
+      "health": "not_installed",
+      "id": "zairenkai_graphics",
+      "owns": [],
+      "requested_permissions": [],
+      "version": null
+    },
+    {
+      "compatible": false,
+      "detail": "Zairenkai-ART: no released component; Core has no adapter for it yet",
+      "health": "not_installed",
+      "id": "zairenkai_art",
+      "owns": [],
+      "requested_permissions": [],
+      "version": null
+    }
+  ],
+  "v": 1
+}

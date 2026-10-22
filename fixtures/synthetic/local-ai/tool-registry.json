@@ -1,0 +1,75 @@
+[
+  {
+    "id": "core.health",
+    "description": "Read zcored health through Core.",
+    "risk": "read_only",
+    "access": "read",
+    "permission": "root_via_core",
+    "reversible": true,
+    "timeout_ms": 5000,
+    "confirmation": "none",
+    "parameters": {
+      "type": "object",
+      "additionalProperties": false
+    },
+    "output": "https://zairenkaiprjctx.github.io/schemas/sdk/core/health.schema.json"
+  },
+  {
+    "id": "core.capabilities",
+    "description": "Read Core capabilities.",
+    "risk": "read_only",
+    "access": "read",
+    "permission": "root_via_core",
+    "reversible": true,
+    "timeout_ms": 5000,
+    "confirmation": "none",
+    "parameters": {
+      "type": "object",
+      "additionalProperties": false
+    },
+    "output": "https://zairenkaiprjctx.github.io/schemas/sdk/core/capabilities.schema.json"
+  },
+  {
+    "id": "thermal.snapshot",
+    "description": "Run zthermal snapshot (read only).",
+    "risk": "read_only",
+    "access": "read",
+    "permission": "none",
+    "reversible": true,
+    "timeout_ms": 15000,
+    "confirmation": "none",
+    "parameters": {
+      "type": "object",
+      "additionalProperties": false
+    },
+    "output": "https://zairenkaiprjctx.github.io/schemas/zthermal/snapshot.schema.json"
+  },
+  {
+    "id": "fas.set_profile",
+    "description": "Ask Core to set the FAS profile.",
+    "risk": "system",
+    "access": "write",
+    "permission": "root_via_core",
+    "reversible": true,
+    "timeout_ms": 10000,
+    "confirmation": "explicit",
+    "core_operation": "fas_set_profile",
+    "parameters": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "profile"
+      ],
+      "properties": {
+        "profile": {
+          "enum": [
+            "power_saver",
+            "balanced",
+            "performance"
+          ]
+        }
+      }
+    },
+    "output": "https://zairenkaiprjctx.github.io/schemas/sdk/core/submit-result.schema.json"
+  }
+]

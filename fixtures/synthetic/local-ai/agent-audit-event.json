@@ -1,0 +1,8 @@
+{
+  "seq": 4,
+  "at_ms": 2100,
+  "kind": "execution_result",
+  "plan_id": "p-0003",
+  "invocation_id": "i-1",
+  "detail": "rejected by Core policy"
+}

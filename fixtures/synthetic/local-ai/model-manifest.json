@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "model_id": "synthetic_test_model",
+  "display_name": "Synthetic test entry (no such model)",
+  "source": {
+    "url": "https://example.invalid/models/synthetic",
+    "revision": "0000000000000000000000000000000000000000"
+  },
+  "files": [
+    {
+      "name": "synthetic.gguf",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "size_bytes": 1
+    }
+  ],
+  "format": "gguf",
+  "licenses": {
+    "weights": "none (synthetic)",
+    "tokenizer": "none (synthetic)",
+    "config": "none (synthetic)"
+  },
+  "context_tokens": 512,
+  "min_memory_bytes": 1,
+  "abis": [
+    "arm64-v8a"
+  ],
+  "safety_evaluation": "not_evaluated"
+}

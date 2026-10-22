@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zairenkaiprjctx.github.io/schemas/sdk/core/submit-result.schema.json",
+  "title": "zcored submit result",
+  "description": "`submit` method (Core crates/zcore-domain/src/decision.rs: ActionResult, ActionOutcome, PolicyDecision).",
+  "allOf": [
+    {
+      "$ref": "envelope.schema.json"
+    },
+    {
+      "properties": {
+        "ok": {
+          "const": true
+        },
+        "result": {
+          "type": "object",
+          "required": [
+            "request_id",
+            "outcome",
+            "message"
+          ],
+          "properties": {
+            "request_id": {
+              "type": "string"
+            },
+            "outcome": {
+              "enum": [
+                "applied",
+                "already_applied",
+                "dry_run",
+                "rejected",
+                "unsupported",
+                "timed_out",
+                "unverified",
+                "rolled_back",
+                "failed"
+              ]
+            },
+            "decision": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "object",
+                  "required": [
+                    "verdict",
+                    "tier",
+                    "rules"
+                  ],
+                  "properties": {
+                    "verdict": {
+                      "enum": [
+                        "allow",
+                        "deny",
+                        "needs_confirmation"
+                      ]
+                    },
+                    "tier": {
+                      "enum": [
+                        "safety",
+                        "integrity",
+                        "user",
+                        "thermal_power",
+                        "performance",
+                        "adaptive"
+                      ]
+                    },
+                    "policy_version": {
+                      "type": "string"
+                    },
+                    "rules": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "rule",
+                          "tier",
+                          "verdict",
+                          "explanation"
+                        ],
+                        "properties": {
+                          "rule": {
+                            "type": "string"
+                          },
+                          "tier": {
+                            "enum": [
+                              "safety",
+                              "integrity",
+                              "user",
+                              "thermal_power",
+                              "performance",
+                              "adaptive"
+                            ]
+                          },
+                          "verdict": {
+                            "enum": [
+                              "allow",
+                              "deny",
+                              "needs_confirmation"
+                            ]
+                          },
+                          "explanation": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "plan": {},
+            "verification": {},
+            "lease_id": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "message": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

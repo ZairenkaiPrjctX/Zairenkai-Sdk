@@ -1,0 +1,24 @@
+{
+  "plan_id": "p-0003",
+  "goal": "atur profil seimbang",
+  "facts": [
+    {
+      "text": "FAS profile is performance",
+      "source": "zfasd ctl status via Core",
+      "observed_at_ms": 1000
+    }
+  ],
+  "actions": [
+    {
+      "invocation_id": "i-1",
+      "tool_id": "fas.set_profile",
+      "risk": "system",
+      "expected_change": "FAS profile performance → balanced",
+      "rollback": "set the profile back to performance"
+    }
+  ],
+  "unknowns": [
+    "whether FAS is enabled on this device"
+  ],
+  "requires_confirmation": true
+}

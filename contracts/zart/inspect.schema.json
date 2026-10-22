@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zairenkaiprjctx.github.io/schemas/sdk/zart/inspect.schema.json",
+  "title": "zart inspect",
+  "description": "`zart inspect` (Zairenkai-ART crates/zart/src/inspect.rs, schema 1).",
+  "type": "object",
+  "required": [
+    "schema",
+    "zart_version",
+    "process",
+    "api_level",
+    "art_module",
+    "art_properties",
+    "page_size_bytes",
+    "isa"
+  ],
+  "properties": {
+    "schema": {
+      "const": 1
+    },
+    "zart_version": {
+      "type": "string"
+    },
+    "process": {
+      "type": "object"
+    },
+    "api_level": {
+      "$ref": "observation.schema.json"
+    },
+    "art_module": {
+      "$ref": "observation.schema.json"
+    },
+    "art_properties": {
+      "$ref": "observation.schema.json"
+    },
+    "page_size_bytes": {
+      "$ref": "observation.schema.json"
+    },
+    "isa": {
+      "type": "array"
+    }
+  }
+}

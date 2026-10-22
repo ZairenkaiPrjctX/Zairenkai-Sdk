@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "plan_id": "p-0001",
+  "language": "id",
+  "goal": "cek kenapa HP panas saat main game",
+  "confidence": 0.82,
+  "clarifications": [],
+  "invocations": [
+    {
+      "invocation_id": "i-1",
+      "tool_id": "thermal.snapshot",
+      "arguments": {}
+    },
+    {
+      "invocation_id": "i-2",
+      "tool_id": "core.capabilities",
+      "arguments": {}
+    }
+  ]
+}
